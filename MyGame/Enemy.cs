@@ -1,0 +1,7 @@
+namespace MyGame
+{
+    class Enemy
+    {
+        
+    }
+}
