@@ -34,5 +34,20 @@ namespace MyGame
         public void SetName(string name){
             this.name = name.Trim();
         }
+
+        public void PickupPowerUp(PowerUp pu, float gain)
+        {
+            if(pu == PowerUp.Health)
+            {
+                health += gain;
+                if(health > 100) health = 100;
+                if(health < 0) health = 0;
+            }
+            else if(pu == PowerUp.Shield){
+                shield += gain;
+                if(shield > 100) shield = 100;
+                if(shield < 0) shield = 0;
+            }
+        }
     }
 }
