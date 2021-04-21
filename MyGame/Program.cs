@@ -6,7 +6,9 @@ namespace MyGame
     {
         static void Main(string[] args)
         {
-         
+            Enemy e = new Enemy("Enemy 1");
+            
+
         }
     }
 }
