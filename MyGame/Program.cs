@@ -6,9 +6,28 @@ namespace MyGame
     {
         static void Main(string[] args)
         {
-            Enemy e = new Enemy("Enemy 1");
+            int numEnemies;
+            Enemy[] enemies;
             
 
+            Console.Write("Enemy count? ");
+            numEnemies = int.Parse(Console.ReadLine());
+
+            enemies = new Enemy[numEnemies];
+
+            for(int i = 0; i < numEnemies; i++)
+            {
+                string name;
+
+                Console.Write($"Name of enemy {i}: ");
+                name = Console.ReadLine();
+                enemies[i] = new Enemy(name);
+            }
+
+            foreach (Enemy e in enemies)
+            {
+                Console.WriteLine(e.GetName());
+            }
         }
     }
 }
